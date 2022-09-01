@@ -10,11 +10,12 @@ public class Main {
     public static void main(String[] args) {
         int number = 0;
         if (number > 0) {
-            System.out.println("old number is " + number + " and new number is " + (number + 1));
+            number = number + 1;
         } else if (number < 0) {
             System.out.println("old number is " + number + " and new number is " + (number - 2));
         } else {
             System.out.println("You have entered zero and new value is " + (number = 10));
         }
+        System.out.println(number);
     }
 }
