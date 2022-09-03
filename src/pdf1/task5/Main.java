@@ -7,21 +7,21 @@ package pdf1.task5;
 
 public class Main {
     public static void main(String[] args) {
-        int numberone = 1;
-        int numbertwo = -2;
-        int numberthree = 3;
-        int[] array = {numberone, numbertwo, numberthree};
-        int positivenumber = 0;
-        int negativenumber = 0;
+        int numberOne = 1;
+        int numberTwo = -2;
+        int numberThree = 3;
+        int[] array = {numberOne, numberTwo, numberThree};
+        int positiveNumber = 0;
+        int negativeNumber = 0;
 
         for (int i : array) {
             if (i > 0) {
-                positivenumber = positivenumber + 1;
+                positiveNumber++;
             } else {
-                negativenumber = negativenumber + 1;
+                negativeNumber++;
             }
         }
-        System.out.println("amount positive numbers are " + positivenumber + " and amount negative numbers are " +
-                negativenumber);
+        System.out.println("amount positive numbers are " + positiveNumber + " and amount negative numbers are " +
+                negativeNumber);
     }
 }
