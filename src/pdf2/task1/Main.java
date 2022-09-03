@@ -8,6 +8,14 @@ package pdf2.task1;
 
 public class Main {
     public static void main(String[] args) {
+        double oneDayDistance = 10;
+        int week = 7;
+        double distance = 0;
 
+        for (int i = 0; i < week; i++) {
+            distance += oneDayDistance;
+            oneDayDistance = 1.1 * oneDayDistance;
+        }
+        System.out.println(distance);
     }
 }
