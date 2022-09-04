@@ -9,16 +9,37 @@ package pdf1.task1;
 
 public class Main {
     public static void main(String[] args) {
-        int number = 0;
-        String mynumber = Integer.toString(number);
-        if (number >= 0 && mynumber.length() == 1) {
-            System.out.println(mynumber + " it is single positive number");
-        } else if (mynumber.length() == 2){
-            System.out.println(mynumber + " it is two-digit positive number");
-        } else if (mynumber.length() == 3){
-            System.out.println(mynumber + " it is three-digit positive number");
+        int number = -1000;
+        int convertedNumber = number;
+        String positiveOrNegativePart = "";
+        String digitsCountMessage = "";
+
+        if (number == 0) {
+            System.out.println("You have entered zero!");
         } else {
-            System.out.println(mynumber + " number has a many digits");
+            if (number > 0) {
+                positiveOrNegativePart = "positive number";
+            } else if (number < 0) {
+                convertedNumber = Math.abs(number);
+                positiveOrNegativePart = "negative number";
+            }
+
+            String myNumber = Integer.toString(convertedNumber);
+
+            switch (myNumber.length()) {
+                case 1:
+                    digitsCountMessage = " is single ";
+                    break;
+                case 2:
+                    digitsCountMessage = " is two-digit ";
+                    break;
+                case 3:
+                    digitsCountMessage = " is three-digit ";
+                    break;
+                default:
+                    digitsCountMessage = " has more than 3 digits ";
+            }
+            System.out.println(number + digitsCountMessage + positiveOrNegativePart);
         }
     }
 }

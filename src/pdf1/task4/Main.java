@@ -7,20 +7,15 @@ package pdf1.task4;
 
 public class Main {
     public static void main(String[] args) {
-        int numberone = -123;
-        int numbertwo = 234;
-        int numberthree = -3453;
-        int[] Array = new int[3];
-        Array[0] = numberone;
-        Array[1] = numbertwo;
-        Array[2] = numberthree;
+        int numberOne = -123;
+        int numberTwo = 234;
+        int numberThree = -3453;
+        int[] array = {numberOne, numberTwo, numberThree};
         int amount = 0;
 
-        for (int i : Array) {
+        for (int i : array) {
             if (i > 0) {
-                amount = amount + 1;
-            } else {
-                amount = amount;
+                amount++;
             }
         }
         System.out.println(amount);
