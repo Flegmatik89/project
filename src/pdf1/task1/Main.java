@@ -9,45 +9,37 @@ package pdf1.task1;
 
 public class Main {
     public static void main(String[] args) {
-        int number = 0;
-        String myNumber = Integer.toString(number);
-        int positiveNumber = 0;
-        int negativeNumber = 0;
+        int number = -1000;
+        int convertedNumber = number;
+        String positiveOrNegativePart = "";
+        String digitsCountMessage = "";
 
-        if (number > 0) {
-            positiveNumber = number;
-            switch (myNumber.length()){
-                case 1:
-                    System.out.println(positiveNumber + " it is single positive number");
-                    break;
-                case 2:
-                    System.out.println(positiveNumber + " it is two-digit positive number");
-                    break;
-                case 3:
-                    System.out.println(positiveNumber + " it is three-digit positive number");
-                    break;
-                case 4:
-                    System.out.println(positiveNumber + " number has a many digits");
-                    break;
-            }
-        } else if (number < 0) {
-            negativeNumber = number;
-            switch (myNumber.length() - 1){
-                case 1:
-                    System.out.println(negativeNumber + " it is single negative number");
-                    break;
-                case 2:
-                    System.out.println(negativeNumber + " it is two-digit negative number");
-                    break;
-                case 3:
-                    System.out.println(negativeNumber + " it is three-digit negative number");
-                    break;
-                case 4:
-                    System.out.println(negativeNumber + " number has a many digits");
-                    break;
-            }
-        } else {
+        if (number == 0) {
             System.out.println("You have entered zero!");
+        } else {
+            if (number > 0) {
+                positiveOrNegativePart = "positive number";
+            } else if (number < 0) {
+                convertedNumber = Math.abs(number);
+                positiveOrNegativePart = "negative number";
+            }
+
+            String myNumber = Integer.toString(convertedNumber);
+
+            switch (myNumber.length()) {
+                case 1:
+                    digitsCountMessage = " is single ";
+                    break;
+                case 2:
+                    digitsCountMessage = " is two-digit ";
+                    break;
+                case 3:
+                    digitsCountMessage = " is three-digit ";
+                    break;
+                default:
+                    digitsCountMessage = " has more than 3 digits ";
+            }
+            System.out.println(number + digitsCountMessage + positiveOrNegativePart);
         }
     }
 }

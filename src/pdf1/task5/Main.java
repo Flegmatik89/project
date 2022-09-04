@@ -7,7 +7,7 @@ package pdf1.task5;
 
 public class Main {
     public static void main(String[] args) {
-        int numberOne = 1;
+        int numberOne = 0;
         int numberTwo = -2;
         int numberThree = 3;
         int[] array = {numberOne, numberTwo, numberThree};
@@ -17,7 +17,7 @@ public class Main {
         for (int i : array) {
             if (i > 0) {
                 positiveNumber++;
-            } else {
+            } else if (i < 0) {
                 negativeNumber++;
             }
         }
