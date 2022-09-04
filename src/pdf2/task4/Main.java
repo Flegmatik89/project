@@ -15,8 +15,13 @@ public class Main {
         System.out.println("Enter second number: ");
         int b = scanner.nextInt();
         int sum = 0;
-        for (int i = 0; i != a; i++){
-            sum += b;
+
+        for (int i = 0; i < Math.abs(a); i++){
+            if (a < 0) {
+                sum -= b;
+            } else {
+                sum += b;
+            }
         }
         System.out.println(a + " * " + b + " = " + sum);
     }
