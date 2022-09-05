@@ -5,8 +5,24 @@ package pdf2.task4;
 умножения.
  */
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        int a = scanner.nextInt();
+        System.out.println("Enter second number: ");
+        int b = scanner.nextInt();
+        int sum = 0;
 
+        for (int i = 0; i < Math.abs(a); i++){
+            if (a < 0) {
+                sum -= b;
+            } else {
+                sum += b;
+            }
+        }
+        System.out.println(a + " * " + b + " = " + sum);
     }
 }
